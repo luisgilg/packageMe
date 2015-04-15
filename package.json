@@ -1,0 +1,24 @@
+{
+  "name": "packageMe",
+  "version": "1.0.0",
+  "description": "colect used packages from node js project",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luisgilg/packageMe.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "packages"
+  ],
+  "author": "Luis Gil",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/luisgilg/packageMe/issues"
+  },
+  "homepage": "https://github.com/luisgilg/packageMe"
+}
