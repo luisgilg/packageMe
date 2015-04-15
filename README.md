@@ -17,8 +17,9 @@ node app.js analize <project_path>
 ```
 
 > 2) edit the created file &lt;project_path&gt;/packageMe.json, set "include" to "true|dev"
-    true: will be added in &lt;project_path&gt;/package.json dependencies
-    dev: will be added in &lt;project_path&gt;/package.json devDependencies
+>> true: will be added in &lt;project_path&gt;/package.json dependencies
+
+>> dev: will be added in &lt;project_path&gt;/package.json devDependencies
     
 > 3) run command to apply change in &lt;project_path&gt;/package.json: 
 ```sh
