@@ -11,8 +11,7 @@
     "url": "https://github.com/luisgilg/packageMe.git"
   },
   "keywords": [
-    "node",
-    "js",
+    "node js",
     "packages"
   ],
   "author": "Luis Gil",
@@ -20,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/luisgilg/packageMe/issues"
   },
-  "homepage": "https://github.com/luisgilg/packageMe"
+  "homepage": "https://github.com/luisgilg/packageMe",
+  "dependencies": {
+    "async": "^0.9.0",
+    "minimist": "^1.1.1"
+  }
 }
