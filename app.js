@@ -4,11 +4,7 @@ var exec = require('child_process').exec;
 var nodePath = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 
-
-//var projectPath = '/home/luisgil/MeanProjects/cmms/node_modules';
-//var mainPath = '/home/luisgil/MeanProjects/cmms/package.json';
-
-
+var usageMessage = 'Usage: node app.js <command> <project_path> [<output>]\nWhere <command> is one of : analize, save\n<project_path> is: path to node js project for example\n<output> is: optional, output filename, dafault value is <project_path>\/packageMe.json\n\nSteps:\n1) run command: node app.js analize <project_path>\n2) edit created file <project_path>\/packageMe.json, set \"include\" to \"true|dev\"\n    true: will be added in <project_path>\/package.json dependencies\n    dev: will be added in <project_path>\/package.json devDependencies\n3) run command: node app.js save <project_path> to apply change in <project_path>\/package.json\n\npackageMe.json example:\n{\n  \"localUnreferenceModules\": [\n    {\n      \"name\": \"async\",\n      \"version\": \"0.9.0\",\n      \"include\": false \/\/<- set this to: true or dev\n    }],\n  \"globalUnreferenceModules\": [\n    {\n      \"name\": \"bower\",\n      \"version\": \"1.4.0\",\n      \"include\": false \/\/<- set this to: true or dev\n    }]\n}'; 
 
 if (argv && argv._.length>0) {
 
@@ -33,9 +29,10 @@ if (argv && argv._.length>0) {
 
 		return save(paths[0],paths[1]);
 	}
-	return console.log('Invalid arguments');
-
-};
+	return console.log(usageMessage);
+}else{
+	return console.log(usageMessage);
+}
 
 	
 
