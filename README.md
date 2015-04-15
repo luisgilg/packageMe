@@ -5,23 +5,28 @@
 node app.js <command> <project_path> [<output>]
 ```
 
-Where <command> is one of : analize, save 
-<project_path> is: path to node js project. 
-<output> is: optional, output filename, dafault value is <project_path>/packageMe.json
+Where &lt;command&gt; is one of : analize, save 
+&lt;project_path&gt; is: path to node js project. 
+&lt;output&gt; is: optional, output filename, dafault value is &lt;project_path&gt;/packageMe.json
+
 
 #### Steps:
-> run command: 
+> 1) run command: 
 ```sh
 node app.js analize <project_path>
 ```
-> edit the created file <project_path>/packageMe.json, set "include" to "true|dev"
-    true: will be added in <project_path>/package.json dependencies
-    dev: will be added in <project_path>/package.json devDependencies
-> run command to apply change in <project_path>/package.json: 
+
+> 2) edit the created file &lt;project_path&gt;/packageMe.json, set "include" to "true|dev"
+    true: will be added in &lt;project_path&gt;/package.json dependencies
+    dev: will be added in &lt;project_path&gt;/package.json devDependencies
+    
+> 3) run command to apply change in &lt;project_path&gt;/package.json: 
 ```sh
 node app.js save <project_path> 
 ```
+
 packageMe.json example:
+
 ```javascript
 {
   "localUnreferenceModules": [
